@@ -14,15 +14,25 @@ Scholars / Students of IIITG need to get an account / credentials for accessing 
 Configurations
 
 Download WinSCP and install 
+
 Login to the server using credentials 
+
 Download putty and install it, if it is not installed
+
 Open putty fro WinSCP
+
 Then login using your credentials in PuTTY 
+
 Inside PuTTY activate the anaconda using source ~/anaconda3/bin/activate
+
 Now create a new environment for your personal use using conda create --name myenv
+
 Activate the environment using 
+
 conda activate myenv  for deactivation use conda deactivate myenv 
+
 Install PyTorch using 
+
 conda install pytorch==2.5.0 torchvision==0.20.0 torchaudio==2.5.0 pytorch-cuda=12.4 -c pytorch -c nvidia
 
 
