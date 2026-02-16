@@ -43,8 +43,10 @@ nvidia-smi : to check the list of GPU CARDS
 
 CUDA_VISIBLE_DEVICES=2 python check_GPU.py : To select the GPU card, here number 2 represents the available gpu card and check_GPU.py is the name of the program to execute 
 top: to check the running processes and respective users
+
 gpustat: to check the status of the GPU cards 
 CUDA_VISIBLE_DEVICES=2 nohup python check_GPU.py & :: here nohup before the program file name and & after the program file name  helps to execute the programs in the server without continuos connection with local machine
+
 It returns a process ID that we can check using top command, and it also create a nohup.out file where we can see the progress and output of the program executing in the background  
 
 
