@@ -1,4 +1,4 @@
-# 🚀 GPU Usage Guide – IIIT Guwahati
+# GPU Usage Guide – IIIT Guwahati
 
 A **step-by-step guide for accessing and using the GPU servers at IIIT Guwahati (IIITG)**.  
 This document helps students and scholars set up their environment and run GPU-based programs efficiently.
@@ -18,7 +18,7 @@ This document helps students and scholars set up their environment and run GPU-b
 
 ---
 
-# 🧾 Account Acquisition
+# Account Acquisition
 
 Students / Scholars of **IIIT Guwahati** must obtain **GPU server credentials** from the **ICT Section**.
 
@@ -32,7 +32,7 @@ Students / Scholars of **IIIT Guwahati** must obtain **GPU server credentials** 
 
 ---
 
-# 💻 Required Software
+# Required Software
 
 Install the following tools on your **local machine**.
 
@@ -43,7 +43,7 @@ Install the following tools on your **local machine**.
 
 ---
 
-# 🔑 Server Login Setup
+# Server Login Setup
 
 ### 1️⃣ Install WinSCP
 
@@ -78,7 +78,7 @@ Enter the **server credentials** provided by the ICT section.
 
 ---
 
-# 🧠 Environment Setup
+# Environment Setup
 
 ### Activate Anaconda
 
@@ -112,7 +112,7 @@ conda deactivate
 
 ---
 
-# ⚡ Installing PyTorch with CUDA
+# Installing PyTorch with CUDA
 
 Run the following command:
 
@@ -129,7 +129,7 @@ This installs:
 
 ---
 
-# 📊 Useful Commands
+# Useful Commands
 
 ### Check Available GPUs
 
@@ -218,7 +218,7 @@ top
 
 ---
 
-# 💡 Tips
+# Tips
 
 ⚠ **PyTorch GPU Indexing Note**
 
@@ -238,7 +238,7 @@ nvidia-smi
 
 ---
 
-# 🎯 Summary
+# Summary
 
 Using this guide, you can:
 
@@ -250,4 +250,4 @@ Using this guide, you can:
 
 ---
 
-💻 **Happy GPU Computing!**
+**Happy GPU Computing!**
