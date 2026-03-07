@@ -1,59 +1,253 @@
-# Userguide_GPU_usage_at_IIITG
+# 🚀 GPU Usage Guide – IIIT Guwahati
 
-Step-by-step guide for Server's GPU acess at IIIT Guwahati.
+A **step-by-step guide for accessing and using the GPU servers at IIIT Guwahati (IIITG)**.  
+This document helps students and scholars set up their environment and run GPU-based programs efficiently.
 
+---
 
-# Account aquisation 
+## 📑 Table of Contents
 
-Scholars / Students of IIITG need to get an account / credentials for accessing the GPU from ICT section.
+- [Account Acquisition](#account-acquisition)
+- [Required Software](#required-software)
+- [Server Login Setup](#server-login-setup)
+- [Environment Setup](#environment-setup)
+- [Installing PyTorch with CUDA](#installing-pytorch-with-cuda)
+- [Useful Commands](#useful-commands)
+- [Running Programs in Background](#running-programs-in-background)
+- [Tips](#tips)
 
-# Installations
- following are the list of tools to be downloaded for better user experience 
+---
 
+# 🧾 Account Acquisition
 
-Configurations
+Students / Scholars of **IIIT Guwahati** must obtain **GPU server credentials** from the **ICT Section**.
 
-Download WinSCP and install 
+### Steps
+1. Contact the ICT support team.
+2. Request **GPU server access**.
+3. Once approved, you will receive:
+   - **Username**
+   - **Password**
+   - **Server address**
 
-Login to the server using credentials 
+---
 
-Download putty and install it, if it is not installed
+# 💻 Required Software
 
-Open putty fro WinSCP
+Install the following tools on your **local machine**.
 
-Then login using your credentials in PuTTY 
+| Tool | Purpose |
+|-----|-----|
+| WinSCP | Transfer files between your system and server |
+| PuTTY | SSH access to the server |
 
-Inside PuTTY activate the anaconda using source ~/anaconda3/bin/activate
+---
 
-Now create a new environment for your personal use using conda create --name myenv
+# 🔑 Server Login Setup
 
-Activate the environment using 
+### 1️⃣ Install WinSCP
 
-conda activate myenv  for deactivation use conda deactivate myenv 
+Download and install **WinSCP**.
 
-Install PyTorch using 
+### 2️⃣ Connect to the Server
 
+1. Open **WinSCP**
+2. Enter:
+   - Hostname
+   - Username
+   - Password
+3. Click **Login**
+
+---
+
+### 3️⃣ Install PuTTY
+
+Download and install **PuTTY** if it is not already installed.
+
+---
+
+### 4️⃣ Open PuTTY from WinSCP
+
+Inside **WinSCP**, open **PuTTY terminal**.
+
+---
+
+### 5️⃣ Login Using Credentials
+
+Enter the **server credentials** provided by the ICT section.
+
+---
+
+# 🧠 Environment Setup
+
+### Activate Anaconda
+
+```bash
+source ~/anaconda3/bin/activate
+```
+
+---
+
+### Create a New Conda Environment
+
+```bash
+conda create --name myenv
+```
+
+---
+
+### Activate Environment
+
+```bash
+conda activate myenv
+```
+
+---
+
+### Deactivate Environment
+
+```bash
+conda deactivate
+```
+
+---
+
+# ⚡ Installing PyTorch with CUDA
+
+Run the following command:
+
+```bash
 conda install pytorch==2.5.0 torchvision==0.20.0 torchaudio==2.5.0 pytorch-cuda=12.4 -c pytorch -c nvidia
+```
 
+This installs:
 
+- PyTorch
+- Torchvision
+- Torchaudio
+- CUDA support
 
-Useful commands
+---
 
-nvidia-smi : to check the list of GPU CARDS
+# 📊 Useful Commands
 
-CUDA_VISIBLE_DEVICES=2 python check_GPU.py : To select the GPU card, here number 2 represents the available gpu card and check_GPU.py is the name of the program to execute 
-top: to check the running processes and respective users
+### Check Available GPUs
 
-gpustat: to check the status of the GPU cards 
-CUDA_VISIBLE_DEVICES=2 nohup python check_GPU.py & :: here nohup before the program file name and & after the program file name  helps to execute the programs in the server without continuos connection with local machine
+```bash
+nvidia-smi
+```
 
-It returns a process ID that we can check using top command, and it also create a nohup.out file where we can see the progress and output of the program executing in the background  
+Displays:
+- GPU cards
+- Memory usage
+- Running processes
 
+---
 
-Tips
+### Run Program on Specific GPU
 
-For PyTorch GPU CARD 3 is considered as card 1 
+```bash
+CUDA_VISIBLE_DEVICES=2 python check_GPU.py
+```
 
+Where:
 
+- `2` → GPU ID  
+- `check_GPU.py` → Python program
 
+---
 
+### Monitor Running Processes
+
+```bash
+top
+```
+
+Shows:
+- Running processes
+- Active users
+- CPU usage
+
+---
+
+### Check GPU Status
+
+```bash
+gpustat
+```
+
+Displays GPU utilization in a simplified format.
+
+---
+
+# 🔄 Running Programs in Background
+
+To run a program **without keeping your local machine connected**, use:
+
+```bash
+CUDA_VISIBLE_DEVICES=2 nohup python check_GPU.py &
+```
+
+Explanation:
+
+| Command | Description |
+|------|------|
+| `nohup` | Keeps program running after logout |
+| `&` | Runs the process in background |
+
+After running:
+
+- A **Process ID (PID)** will be returned
+- Output will be saved in **nohup.out**
+
+---
+
+### Check Program Output
+
+```bash
+cat nohup.out
+```
+
+---
+
+### Monitor Running Processes
+
+```bash
+top
+```
+
+---
+
+# 💡 Tips
+
+⚠ **PyTorch GPU Indexing Note**
+
+Sometimes GPU indexing inside PyTorch differs from system indexing.
+
+Example:
+
+| System GPU | PyTorch GPU |
+|-----------|-------------|
+| GPU 3 | GPU 1 |
+
+Always verify GPU mapping using:
+
+```bash
+nvidia-smi
+```
+
+---
+
+# 🎯 Summary
+
+Using this guide, you can:
+
+- Access IIITG GPU servers
+- Create personal environments
+- Install GPU-enabled PyTorch
+- Run programs on specific GPUs
+- Execute long jobs in the background
+
+---
+
+💻 **Happy GPU Computing!**
