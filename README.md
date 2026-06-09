@@ -5,7 +5,7 @@ This document helps students and scholars set up their environment and run GPU-b
 
 ---
 
-## 📑 Table of Contents
+## Table of Contents
 
 - [Account Acquisition](#account-acquisition)
 - [Required Software](#required-software)
@@ -180,7 +180,7 @@ Displays GPU utilization in a simplified format.
 
 ---
 
-# 🔄 Running Programs in Background
+#  Running Programs in Background
 
 To run a program **without keeping your local machine connected**, use:
 
@@ -249,5 +249,3 @@ Using this guide, you can:
 - Execute long jobs in the background
 
 ---
-
-**Happy GPU Computing!**
