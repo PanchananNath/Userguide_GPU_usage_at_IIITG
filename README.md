@@ -184,8 +184,8 @@ Logical cuda:5
 
 Logical cuda:6
   Name      : Tesla V100-PCIE-32GB
-  PCI Bus ID: Not available in this PyTorch version
-  ```
+  PCI Bus ID: Not available in this PyTorch version```
+  
 
 ---
 
