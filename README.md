@@ -5,18 +5,7 @@ This document helps students and scholars set up their environment and run GPU-b
 
 ---
 
-## Table of Contents
 
-- [Account Acquisition](#account-acquisition)
-- [Required Software](#required-software)
-- [Server Login Setup](#server-login-setup)
-- [Environment Setup](#environment-setup)
-- [Installing PyTorch with CUDA](#installing-pytorch-with-cuda)
-- [Useful Commands](#useful-commands)
-- [Running Programs in Background](#running-programs-in-background)
-- [Tips](#tips)
-
----
 
 # Account Acquisition
 
