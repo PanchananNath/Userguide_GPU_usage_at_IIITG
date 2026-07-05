@@ -145,7 +145,8 @@ Where:
 - `check_GPU.py` → Python program
 
 
-  ``` Visible CUDA devices: 7
+  ```bash
+  Visible CUDA devices: 7
 
 Logical cuda:0
   Name      : NVIDIA A100-PCIE-40GB
@@ -173,7 +174,8 @@ Logical cuda:5
 
 Logical cuda:6
   Name      : Tesla V100-PCIE-32GB
-  PCI Bus ID: Not available in this PyTorch version```
+  PCI Bus ID: Not available in this PyTorch version
+  ```
   
 
 ---
